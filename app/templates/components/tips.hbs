@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="d-flex justify-content-center">
+<form class="card border-primary mb-3" style="max-width:22rem;" action="javsscript:void(0)">
+     <h1 class="text-info card-header">Tip calucular</h1>
+     <div class="card-body">
+        <p>
+            <label for="billAmount">Bill  Amount:$</label>
+            <input value={{this.amount}} onchange={{action (mut this.amount)value="target.value" }}  type="number" step="0.01">
+        </p>
+        <p>
+            <label for="billAmount">Total Amount:$</label>
+            <input value={{this.total}} onchange={{action (mut this.total)value="target.value" }}  type="number" step="0.01" disabled="disabled">
+        </p>
+        <p>
+        <label for="tipPercentage">Tip Percentage</label>
+        <button class="btn btn-primary" onclick={{action this.add15 this.amount this.total}}>15%</button>
+		<button class="btn btn-primary" onclick={{action this.add18 this.amount this.total}}>18%</button>
+		<button class="btn btn-primary" onclick={{action this.add20 this.amount this.total}}>20%</button>
+        </p>
+     </div>
+    </form> 
+</div>
+{{yield}}
